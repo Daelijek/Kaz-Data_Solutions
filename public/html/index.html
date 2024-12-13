@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="../css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<title>KazData | Solutions </title>
+</head>
+
+<body>
+
+	<header>
+		<div class="header_container">
+			<div class="header_logo">
+				KazData | Solutions
+			</div>
+			<div class="header_navbar">
+				<ul class="header_navbar_list">
+					<li class="header_navbar_item"><a href="">Home</a></li>
+					<li class="header_navbar_item"><a href="events.html">Events</a></li>
+					<li class="header_navbar_item">
+						<select name="City" id="city" class="header_navbar_select">
+							<option class="header_navbar_options" value="city">City</option>
+							<option class="header_navbar_options" value="astana">Astana</option>
+							<option class="header_navbar_options" value="almaty">Almaty</option>
+							<option class="header_navbar_options" value="karaganda">Karaganda</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="main_container">
+			<div class="hud">
+				<div class="search_event">
+					<label for="search_event">Search event</label>
+					<div class="search_event_input">
+						<input id="search_flowers" type="text" class="navbar-nav_text" name="search_event"
+							placeholder="Enter name of event">
+						<button class="navbar_search_button">
+							<img id="search_button" src="../img/glass.png" alt="search_button" class="search_button">
+						</button>
+					</div>
+					<div class="calendar"></div>
+				</div>
+				<div class="map">
+					<img class="point_on_map" src="../img/Point_on_map.png" alt="Point on map" id="point">
+					<img class="kz_map" src="../img/Map_KZ.png" alt="Map of Kazakhstan">
+				</div>
+			</div>
+
+			<div class="main_catalog" id="results_list">
+				<div class="event_cards">
+					<div class="row events">
+						<div class="card">
+							<img draggable="false" src="../img/krug.jpg" alt="Krug">
+							<div class="card_information">
+								<h1 class="card_title">Concert by Mikhail Krug</h1>
+								<button class="card_btn" data-title="Concert by Mikhail Krug" data-price="$30 - $100"
+									data-description="Experience an unforgettable evening of Russian chanson as the music of Mikhail Krug fills the air. Known for his soulful voice and timeless songs, this concert will take you on an emotional journey through Krug's greatest hits. Enjoy a mix of classic ballads and deep storytelling that have made him a beloved figure in Russian music."
+									data-image="../img/krug.jpg">Order</button>
+							</div>
+						</div>
+
+						<div class="card">
+							<img draggable="false" src="../img/nwa.jpg" alt="Whisper of Love">
+							<div class="card_information">
+								<h1 class="card_title">Concert by N.W.A - "Straight Outta Beats" </h1>
+								<button class="card_btn" data-title='Concert by N.W.A - "Straight Outta Beats"'
+									data-price="$50 - $150 (depending on seating)" data-description='Celebrate the legacy of N.W.A, the pioneers of West Coast hip-hop, as they perform iconic tracks from their groundbreaking album Straight Outta Compton. Relive the revolutionary sound that changed the rap game forever, with hits like "F*** tha Police", "Straight Outta Compton", and "Express Yourself". This is a once-in-a-lifetime opportunity to see the legends in action!
+									' data-image="../img/nwa.jpg">Order</button>
+							</div>
+						</div>
+
+						<div class="card">
+							<img draggable="false" src="../img/usher.jpg" alt="Royal Charm">
+							<div class="card_information">
+								<h1 class="card_title">Concert by Usher - "Usher Vibes"</h1>
+								<button class="card_btn" data-title="Royal Charm" data-price="$75 - $250 (VIP options available)"
+									data-description='Get ready to experience Usher like never before! The R&B sensation will take you on a musical journey through his extensive catalog, from the seductive beats of "Yeah!" to the emotional "Climax". His smooth moves and flawless vocals will have the crowd dancing all night long. Don’t miss this chance to feel the vibe that only Usher can bring!'
+									data-image="../img/usher.jpg">Order</button>
+							</div>
+						</div>
+
+						<div class="card">
+							<img draggable="false" src="../img/slipknot.jpg" alt="Secret of Love">
+							<div class="card_information">
+								<h1 class="card_title">Concert by Slipknot for 25th anniversary </h1>
+								<button class="card_btn" data-title="Secret of Love" data-price="$60 - $200"
+									data-description='Celebrate 25 years of chaos, energy, and raw intensity with Slipknot as they return to the stage for an epic anniversary show. Expect a mix of their greatest hits, including "Wait and Bleed", "Duality", and "Psychosocial", along with mind-blowing pyrotechnics and unparalleled energy. This is a celebration of two and a half decades of the band that redefined metal.'
+									data-image="../img/slipknot.jpg">Order</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="modal hidden">
+			<div class="flex">
+				<img src="../img/combo_roses_raffaello.jpg" alt="user" />
+				<button class="btn-close"><img src="../img/close.png" alt="close button"></button>
+			</div>
+			<div class="modal_container">
+				<div class="modal_information">
+					<h1 class="modal_title">A combo of red roses and Raffaello</h1>
+					<p class="modal_price">
+						16.300 tg
+					</p>
+				</div>
+				<div class="modal_options">
+					<label for="notes">Add a postcard</label>
+					<select name="notes" id="notes">
+						<option value="notSelected">Not selected</option>
+						<option value="note">Add a note - 350tg</option>
+						<option value="postcard">Add a postcard - 500tg</option>
+					</select>
+
+					<label for="sweats">Add sweats</label>
+					<select name="sweats" id="sweats">
+						<option value="notSelected">Not selected</option>
+						<option value="date">Date in chocolate (12 p.) - 12 000tg</option>
+						<option value="raffaello">Nuts in chocolate - 12,000 tg</option>
+						<option value="bento">Bento cake - 4 500tg</option>
+						<option value="merci">Timsan Dairy dates - 5,500 tg</option>
+					</select>
+
+					<label for="toys">Add Soft Toys</label>
+					<select name="toys" id="toys">
+						<option value="notSelected">Not selected</option>
+						<option value="bunny">Monica Bear (35 cm) - 5,500 tg</option>
+						<option value="goose">Goose-hug (110 cm) - 9 300 tg</option>
+						<option value="capybara">Capybara (35 cm) - 6,100 tg</option>
+						<option value="pikachu">Pikachu - 8,300tg</option>
+					</select>
+				</div>
+				<button class="btn">Add to cart</button>
+				<p class="modal_description"><strong>
+				</p>
+			</div>
+		</section>
+
+		<div class="overlay hidden"></div>
+
+
+	</main>
+
+	<footer></footer>
+
+	<script src="../js/main.js"></script>
+</body>
+
+</html>

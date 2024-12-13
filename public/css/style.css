@@ -1,0 +1,432 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited {
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+	display: inline-block;
+	box-shadow: none;
+	background-color: transparent;
+	background: none;
+	cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+body {
+	background: url(../img/background1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	color: #fff;
+}
+
+header {}
+
+.header_container {
+	background: rgba(217, 217, 217, 0.1);
+	backdrop-filter: blur(10px);
+	width: 1200px;
+	height: 100px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: #fff;
+	padding: 0 40px;
+}
+
+.header_logo {
+	font-family: 'Playfair Display SC';
+	font-weight: 500;
+	font-size: 40px;
+	user-select: none;
+}
+
+.header_navbar_list {
+	display: flex;
+	font-weight: 400;
+	font-size: 21px;
+}
+
+.header_navbar_item:not(:first-child) {
+	margin-left: 50px;
+}
+
+.header_navbar_options {
+	color: black;
+}
+
+.main_container {
+	margin: auto;
+	width: 1200px;
+	height: 960px;
+	background: rgba(217, 217, 217, 0.1);
+	backdrop-filter: blur(10px);
+}
+
+.hud {
+	margin: auto;
+	display: flex;
+	padding: 40px;
+	width: 1200px;
+}
+
+.search_event {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+.search_event label {
+	color: #fff;
+	margin-bottom: 15px;
+	font-size: 23px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.search_event_input {
+	text-align: center;
+}
+
+.search_event input {
+	width: 250px;
+	height: 40px;
+	background-color: #fff;
+	border: 2px solid #fff;
+	border-radius: 12px;
+	padding: 10px;
+}
+
+.search_button {
+	width: 40px;
+	cursor: pointer;
+}
+
+.navbar_search_button img {
+	transition: 0.3s ease-in-out;
+	filter: invert(0%);
+}
+
+.navbar_search_button:hover img {
+	filter: invert(100%);
+}
+
+.calendar {
+	height: 300px;
+}
+
+.map {
+	width: 700px;
+}
+
+.point_on_map {
+	position: absolute;
+	width: 30px;
+	right: 250px;
+	display: none;
+}
+
+#point {
+	position: absolute;
+	opacity: 0; /* Начальная непрозрачность = 0 (невидим) */
+	display: none; /* Скрываем по умолчанию */
+	transition: opacity 0.5s ease, top 0.5s ease, left 0.5s ease; /* Плавное появление и перемещение */
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	margin: 100px 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 200px;
+	height: 300px;
+	margin: 0 30px;
+	text-align: center;
+	background-color: #cfcfcf;
+	user-select: none;
+}
+
+.card img {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+}
+
+.card_title {
+	font-family: 'Playfair Display SC';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+	color: #000000;
+	margin-bottom: 10px;
+}
+
+.card_btn {
+	border: 2px solid #931A1A;
+	border-radius: 20px;
+	width: 100px;
+	height: 25px;
+	background-color: #931A1A;
+	color: #ffffff;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.card_btn:hover {
+	color: #931A1A;
+	background-color: #ffffff;
+}
+
+.modal {
+	display: flex;
+	justify-content: center;
+	width: 1400px;
+	min-height: 95%;
+	z-index: 10;
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.8);
+	/* Start with a slight scale-down */
+	opacity: 0;
+	/* Start with 0 opacity */
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	/* Smooth transition */
+}
+
+.modal.show {
+	opacity: 1;
+	/* Make it fully visible */
+	transform: translate(-50%, -50%) scale(1);
+	/* Scale up to normal size */
+}
+
+
+.modal_container {
+	font-family: 'Montserrat';
+	font-weight: 300;
+	font-style: normal;
+	color: #000000;
+}
+
+.modal_title {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 1.35;
+}
+
+.modal_price {
+	font-size: 20px;
+	color: #000000;
+}
+
+.flex img {
+	width: 560px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.modal .flex {
+	display: flex;
+	align-items: center;
+}
+
+.modal_information {
+	margin-top: 100px;
+}
+
+.modal_options label {
+	display: block;
+	color: #999999;
+	margin-bottom: 5px;
+}
+
+.modal_options select {
+	margin-bottom: 15px;
+	border: 1px solid #b1b1b1;
+	border-radius: 7px;
+	color: #999999;
+	height: 30px;
+	font-size: 14px;
+}
+
+.modal input {
+	font-size: 16px;
+}
+
+.modal p {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.modal_description {
+	font-size: 14px;
+	line-height: 1.55;
+	font-weight: 300;
+	max-width: 560px;
+	color: #494949;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	font-weight: 600;
+}
+
+.btn {
+	padding: 0.8rem 1.4rem;
+	font-weight: 700;
+	background-color: #F04848;
+	color: white;
+	border: 2px solid #F04848;
+	border-radius: 20px;
+	width: 200px;
+	text-align: center;
+	font-size: 1em;
+	transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+	color: #000000;
+	background-color: #fff;
+}
+
+.btn-open {
+	position: absolute;
+	bottom: 150px;
+}
+
+.btn-close {
+	position: absolute;
+	top: 40px;
+	left: 50px;
+	border-radius: 50%;
+}
+
+.btn-close img {
+	width: 20px;
+	margin: auto;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(3px);
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	/* Smooth transition */
+}
+
+.overlay.show {
+	opacity: 1;
+	/* Fully visible */
+}
+
+.hidden {
+	display: none;
+}
